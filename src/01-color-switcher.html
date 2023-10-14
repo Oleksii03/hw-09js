@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color switcher</title>
   <link rel="stylesheet" href="sass/index.scss" />
+  <link rel="stylesheet" href="./sass/pages/color-switcher.scss">
 </head>
 
 <body>
   <p><a href="index.html">Go back</a></p>
 
-  <button type="button" data-start>Start</button>
-  <button type="button" data-stop>Stop</button>
+  <div class="button-wrapper">
+    <button type="button" data-start>
+      Start
+    </button>
+
+    <button type="button" data-stop>
+      Stop
+    </button>
+  </div>
 
   <script src="js/01-color-switcher.js" type="module"></script>
 </body>
