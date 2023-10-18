@@ -1,0 +1,16 @@
+.banner {
+  background-color: #9ceccb;
+  border: 2px solid #000;
+  border-left: none;
+  border-radius: 0 10px 10px 0;
+  max-width: 50vw;
+  margin-top: 100px;
+  padding: 10px;
+
+  transform: translateX(-95%);
+  transition: transform 500ms;
+}
+
+.is-visible {
+  transform: translateX(0);
+}
