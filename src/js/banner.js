@@ -1,9 +1,12 @@
 const bannerEl = document.querySelector('.js-banner');
 const timerEl = document.querySelector('.js-timer');
 
-let counter = 10;
+
 setTimeout(() => {
+  let counter = 10;
+
   bannerEl.classList.add('is-visible');
+
   const intervalId = setInterval(() => {
 
     timerEl.textContent = counter;
