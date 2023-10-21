@@ -6,31 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Countdown timer</title>
   <link rel="stylesheet" href="sass/index.scss" />
+  <link rel="stylesheet" href="./sass/pages/timer.scss">
 </head>
 
 <body>
   <p><a href="index.html">Go back</a></p>
 
-  <input type="text" id="datetime-picker" />
-  <button type="button" data-start>Start</button>
+  <div class="wrapper">
 
-  <div class="timer">
-    <div class="field">
-      <span class="value" data-days>00</span>
-      <span class="label">Days</span>
+    <div class="input-wrapper">
+      <input type="text" id="datetime-picker" />
+      <button type="button" data-start>Start</button>
     </div>
-    <div class="field">
-      <span class="value" data-hours>00</span>
-      <span class="label">Hours</span>
+
+
+    <div class="timer timer-js">
+      <div class="field field-js">
+        <span class="value value-js" data-days>00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="field">
+        <span class="value" data-hours>00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="field">
+        <span class="value" data-minutes>00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="field">
+        <span class="value" data-seconds>00</span>
+        <span class="label">Seconds</span>
+      </div>
     </div>
-    <div class="field">
-      <span class="value" data-minutes>00</span>
-      <span class="label">Minutes</span>
-    </div>
-    <div class="field">
-      <span class="value" data-seconds>00</span>
-      <span class="label">Seconds</span>
-    </div>
+
   </div>
 
   <script src="js/02-timer.js" type="module"></script>
