@@ -1,12 +1,16 @@
 import flatpickr from "flatpickr";
+import Notiflix from 'notiflix';
 
 import "flatpickr/dist/flatpickr.min.css";
 
+const timetBody = document.querySelector('.timer-js');
 const btnStart = document.querySelector('[data-start]');
 const dayeEl = document.querySelector('[data-days]');
 const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
+
+btnStart.setAttribute('disabled', '');
 
 const options = {
   enableTime: true,
@@ -17,17 +21,18 @@ const options = {
   onClose (selectedDates) {
 
     if (selectedDates[0] < new Date()) {
-      btnStart.setAttribute('disabled', '');
-      alert('Please choose a date in the future');
+      Notiflix.Notify.failure('Please choose a date in the future !',
+        { timeout: 3000 },
+      );
       return;
     }
 
     btnStart.removeAttribute('disabled');
 
-
     btnStart.addEventListener('click', onClickBtnStart);
-
     function onClickBtnStart (e) {
+      e.target.disabled = 'true';
+      timetBody.style.backgroundColor = 'rgba(106, 255, 0, 0.797)';
 
       const intervalId = setInterval(() => {
 
@@ -45,7 +50,6 @@ const options = {
         dayeEl.textContent = addLeadingZero(days);
 
       }, 1000);
-
     }
 
     function convertMs (ms) {
@@ -70,5 +74,3 @@ const options = {
 };
 
 const fp = flatpickr("#datetime-picker", options);
-
-console.log();
