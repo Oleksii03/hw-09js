@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: 5px;
+    width: 100%;
+  }
+
+  button {
+    align-self: center;
+    padding: 5px 10;
+  }
+}
