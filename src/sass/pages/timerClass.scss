@@ -1,0 +1,24 @@
+body {
+  background-color: #989393;
+}
+
+.wrapper-list {
+  display: grid;
+  place-items: center;
+
+  padding: 20px;
+
+  border: 2px solid #000;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.text-in {
+  margin-bottom: 20px;
+}
