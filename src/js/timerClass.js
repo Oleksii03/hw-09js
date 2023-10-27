@@ -18,9 +18,9 @@ class Timer {
       const diff = this.targetDate - Date.now();
       const { days, hours, minutes, seconds } = this.convertMs(diff);
 
-      listEl.innerHTML = `Днів: ${days} | 
-                          Годин: ${hours} | 
-                          Хвилин: ${minutes} | 
+      listEl.innerHTML = `Днів: ${days} |
+                          Годин: ${hours} |
+                          Хвилин: ${minutes} |
                           Секунд: ${seconds}`;
     }, 1000);
   }
@@ -57,3 +57,52 @@ function onStartTimer (e) {
 
   inputEl.value = '';
 }
+
+
+// ---------Promise-methods--------------------------------------
+
+// import { randomValue } from "./helpers/fn-random-value";
+
+// const frameworks = ['React', 'Vue', 'Angular'];
+
+
+// function createPromise (framework) {
+//   return new Promise((resolve, reject) => {
+//     const DELAY = randomValue();
+
+//     setTimeout(() => {
+//       if (DELAY < 500) {
+//         resolve({ framework, delay: DELAY });
+//       } else {
+//         reject({ framework, delay: DELAY, error: 'Promis error' });
+//       }
+//     }, DELAY);
+
+//   });
+// };
+
+
+// const promises = frameworks.map(framework => createPromise(framework));
+
+// function onSuccess ({ framework, delay }) {
+//   console.log(`Framework: ${framework} delay: ${delay}`);
+// }
+// function onError ({ framework, delay, error }) {
+//   console.log(`Framework: ${framework} delay: ${delay} error: ${error}`);
+// }
+
+// Promise.allSettled(promises).then(respons => respons.forEach(({ status, value, reason }) => {
+
+//   if (status === 'fulfilled') {
+//     onSuccess(value);
+//   } else {
+//     onError(reason);
+//   }
+
+// }));
+
+// // Promise.race(promises).then(onSuccess).catch(onError);
+
+// // Promise.all(promises)
+// //   .then(res => res.forEach(item => onSuccess(item)))
+// //   .catch(onError);
